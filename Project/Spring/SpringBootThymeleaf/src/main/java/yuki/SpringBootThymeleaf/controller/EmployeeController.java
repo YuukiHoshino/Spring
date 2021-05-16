@@ -25,6 +25,16 @@ public class EmployeeController {
 		employeeService = theEmployeeService;
 	}
 
+	@GetMapping("/login")
+	public String login() {
+	  return "fancy-login";
+	}
+
+	@GetMapping("/login-error")
+	public String loginError() {
+	  return "access-denied";
+	}
+
 	@GetMapping("/showEmployees")
 	public String showEmployees(Model theModel) {
 
